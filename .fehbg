@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill --image-bg 'black' '/home/anna/Pictures/Art/Other/73497750_p0.jpg'
