@@ -1,0 +1,7 @@
+[Default Applications]
+x-scheme-handler/magnet=torrent.desktop;
+application/x-bittorrent=torrent.desktop;
+x-scheme-handler/discord-474605546457137157=discord-474605546457137157.desktop;
+image/png=feh.desktop;
+image/jpeg=feh.desktop;
+image/gif=mpv.desktop;

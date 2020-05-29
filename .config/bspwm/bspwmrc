@@ -1,0 +1,34 @@
+#! /bin/sh
+
+# You need to change this if you have multiple monitors
+bspc monitor -d I II III IV V VI VII VIII
+
+## bspwm configuration
+bspc config border_width          3
+bspc config window_gap            24
+#bspc config top_padding           25
+bspc config split_ratio           0.52
+bspc config borderless_monocle    true
+bspc config gapless_monocle       false 
+bspc config focus_follows_pointer true
+
+# Border colors
+bspc config normal_border_color "#9E3200"
+bspc config focused_border_color "#008BCC"
+
+## rules
+bspc rule -a feh state=floating
+bspc rule -a Gimp-2.10 desktop=^8 follow=on
+bspc rule -a firefox desktop=^2 follow=on
+bspc rule -a Steam  desktop=^3 follow=on
+bspc rule -a discord desktop=^4 follow=on
+bspc rule -a obs desktop=^7 state=floating follow=on
+bspc rule -a sxiv state=pseudo_tiled
+bspc rule -a mpv state=pseudo_tiled
+
+killall -w sxhkd picom &
+sleep 0.1
+dunst &
+picom &
+$HOME/.config/polybar/launch.sh
+sxhkd
